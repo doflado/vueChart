@@ -52,12 +52,14 @@
 </template>
 
 <style scoped>
+p{
+    margin-bottom: 10px !important;
+}
 .footerContainer{
     width: 100%;
     height: 1050px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 .menuContainer>.btnPrimary{
     margin-right: 5%;
@@ -80,7 +82,6 @@
     border: 2px solid #320A8D;
 }
 .btnPrimary{
-    height: 55px;
     padding: 15px 20px;
     border-radius: 10px;
     margin-right: 25px;
@@ -96,7 +97,9 @@
     color: #320A8D;
     flex-direction: row;
     display: flex;
-    justify-content: center;
+    justify-content:start;
+    flex-wrap: wrap;
+    text-align: left;
 }
 .header{
     font-family: 'Alliance No.1';
@@ -107,39 +110,33 @@
     letter-spacing: 0.32px;
     color: #320A8D;
     margin-bottom: 30px;
+    text-align: left;
 }
 .extraPanel{
-    width: calc(100% - 1100px);
-    height: 100%;
+    width: calc(100% - 1200px);
 }
 .newsPanel{
     width: 650px;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
 }
 .normalLinkersPanel{
     width: 500px;
-    height: 20%;
     display: flex;
     justify-content: center;
 }
 .emailSenderContainer{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 350px;
-    padding-left: 220px;
-    padding-right: 220px;
-    align-items: center;
+    flex-wrap: wrap;
+    width: 78%;
+    padding: 50px 11%;
     max-width: 1880px;
     background: #FBFBFE;
 }
 .menuContainer{
-    width: 1880px;
-    height: 400px;
+    width: 100%;
+    height: 500px;
     padding-top: 100px;
     display: flex;
     flex-direction: row;
@@ -148,10 +145,10 @@
     max-width: 1880px;
 }
 .outSenderContainer{
-    width: calc(100%);
+    width: 78%;
     max-width: 1880px;
     height: 300px;
-    padding: 0px 200px;
+    padding: 0px 11%;
     display: flex;
     flex-direction: column;
     justify-content: center;

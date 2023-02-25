@@ -1,19 +1,21 @@
 <template>
-    <main>
+    <div style="width: 100%">
         <div class="navbarContainer flex-row">  
-            <img src="../../assets/images/Navbar/logo.png">
+            <img src="../../assets/images/Navbar/logo.png"><div class="menuPopBtn" style="margin-left: 50px;"> <hr class="menuPopBtn"></div>
             <div class="navBtnContainer ">
                 <div class="navBtnContent flex-Arow flex-Halign-right flex-Valign-center">
-                    <div class="appBtn primaryBtn navBtn"> Join </div>
+                    
+                    <button class="appBtn primaryBtn navBtn"> Join </button>
                     <NuxLinker class="navBtn"> Resources </NuxLinker>
                     <NuxLinker class="navBtn"> Team </NuxLinker>
                     <NuxLinker class="navBtn"> Ecosystem </NuxLinker>
                     <NuxLinker class="navBtn"> Code  </NuxLinker>
                     <NuxLinker class="navBtn"> Products  </NuxLinker>
                 </div>
+                
             </div>
         </div>
-    </main>
+    </div>
 </template>
 
 <script>
@@ -23,17 +25,26 @@ export default {
 </script>
 
 <style>
+.menuPopBtn{
+    display: none;
+    width: 30px;
+    height: 8px;
+    border-width: 0px;
+    border-top: 4px solid salmon;
+    border-bottom: 4px solid salmon;
+    background-color: transparent;
+}
 .navbarContainer {
     display: flex;
-    width: 1723px;
+    width: calc(100% - 100px);
     height: 33px;
     margin-top: 66px;
+    padding: 50px;
 }
 .navBtnContainer {
-    width: 1723px;
+    width: calc(100%);
     height: 100%;
     text-align: right;
-    margin-right: -100px;
 }
 
 .navBtnContent {
@@ -75,7 +86,7 @@ export default {
     font-weight: 700 !important;
 }
 .w-2-1 {
-    width: 48% !important;
+    width: 50% !important;
     height: 100%;
 }
 .h-2-1 {

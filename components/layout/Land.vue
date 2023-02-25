@@ -6,7 +6,7 @@
                 <div class="titlePanel fc-darkBlue fs-bold"> (HMT) </div>
                 <div class="tipPanel"> Fuelling the HUMAN ecosystem </div>
                 <div class="primaryPanel" > 
-                    <div class="primaryBtn" style="width:120px; padding: 15px 15px;"> Learn More </div>
+                    <button class="primaryBtn" style="width:120px; padding: 15px 15px;"> Learn More </button>
                 </div>
             </div>
             <div class="w-2-1">
@@ -27,21 +27,20 @@ export default {
 <style>
 
 .landContainer{
-    width: 1753px;
+    width: calc(100% - 150px);
     margin-top: 60px;
 }
 
 .displayBoardPic{
     background-image: url("../../assets/images/Landbar/displayBoard.png") !important;
-    background-position-x: 980px !important;
+    background-position-x: 100% !important;
     background-position-y: 90px !important;
 }
 .displayWorldPic{
     background-image: url("../../assets/images/Landbar/displayWorld.png") !important;
-    background-position-x: 150px !important;
+    background-position-x: 20% !important;
     background-position-y: 20px !important;
     background-color: transparent !important;
-    width: 1453px !important;
 }
 
 .displayContainer{
@@ -58,6 +57,7 @@ export default {
 .primaryPanel{
     margin-top: 35px;
     width: 100%;
+    text-align: left;
 }
 
 .titleContainer{
@@ -90,4 +90,30 @@ export default {
     margin: 25px 0px;
 }
 
+@media screen and (max-width: 1250px) {
+    .tokenContainer{ display: none !important;}
+}
+@media screen and (max-width: 950px){
+    .showScrollView{  width: 225px !important; overflow-x: scroll !important; padding-left: 5px;}
+    .viewContainer{ width: 1200px !important;}
+    .showUtilityView{  width: 450px !important; overflow-x: scroll !important; padding-left: 5px;}
+    .utilityContainer{  width: 1200px !important;}
+    .entryContainer{ flex-wrap: wrap !important;}
+    .menuContainer{flex-wrap: wrap !important;}
+    .navBtnContainer{display: none;}
+    .menuPopBtn{display: flex !important;}
+}
+
+@media screen and (max-width: 800px){
+    .tokenContainer,
+    .body,
+    .RecentPage,
+    .humanMDContainer{
+        padding-left: 25px !important;
+    }
+    .graphPanel{
+        width: 400px;
+        height: 400px;
+    }
+}
 </style>

@@ -70,6 +70,7 @@
     padding-bottom: 10px;
     align-items: center;
     z-index: 100;
+    margin-bottom: 100px;
 }
 .tokenTitle{
     font-family: 'Alliance No.1';

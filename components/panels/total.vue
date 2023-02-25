@@ -1,15 +1,39 @@
 <script>
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
-import { Doughnut } from 'vue-chartjs'
+import {
+  Chart as ChartJS,
+  ArcElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler,
+DoughnutController,
+} from 'chart.js';
+
+import { Doughnut, Line } from 'vue-chartjs'
 import * as chartConfig from './chartConfig.ts'
 
-ChartJS.register(ArcElement, Tooltip, Legend)
-
+ChartJS.register(
+  ArcElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+);
 export default {
   name: 'App',
   components: {
-    Doughnut
-  },
+    Doughnut,
+    Line,
+    DoughnutController
+},
   data() {
     return chartConfig
   }
@@ -18,9 +42,14 @@ export default {
   
 
 <template>
+  <div>
     <div class="graphPanel">
         <Doughnut :data="data" :options="options" style="width: 600px;"/>
     </div>
+    <div class="graphPanel" style="background-image:none;">
+        <Line :data="dat" :options="opt" style="width: 600px;"/>
+    </div>
+  </div>
 </template>
 
 <style scoped>

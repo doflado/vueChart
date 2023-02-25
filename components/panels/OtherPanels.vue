@@ -1,18 +1,26 @@
 <template>
-    <div>
+    <div class="body">
         <div class="oPanelContainer"> 
             <div class="panelTitle"> How do I get HMT?</div>
-            <div class="logoBtn"> <img src="../../assets/images/others/logos (1).png"> </div>
-            <div class="logoBtn"> <img src="../../assets/images/others/logos (2).png"> </div>
-            <div class="logoBtn"> <img src="../../assets/images/others/logos (3).png"> </div>
-            <div class="logoBtn"> <img src="../../assets/images/others/logos (4).png"> </div>
-            <div class="logoBtn"> <img src="../../assets/images/others/logos (5).png"> </div>
+            <div class="showScrollView">
+                <div class="viewContainer">
+                    <div class="logoBtn"> <img src="../../assets/images/others/logos (1).png"> </div>
+                    <div class="logoBtn"> <img src="../../assets/images/others/logos (2).png"> </div>
+                    <div class="logoBtn"> <img src="../../assets/images/others/logos (3).png"> </div>
+                    <div class="logoBtn"> <img src="../../assets/images/others/logos (4).png"> </div>
+                    <div class="logoBtn"> <img src="../../assets/images/others/logos (5).png"> </div>
+                </div>
+            </div>
         </div>
         <div class="oPanelContainer" style="height: 358px"> 
             <div class="panelTitle"> Utility of the HUMAN token</div>
-            <div class="UtilityBtn"> <img src="../../assets/images/others/utilities (1).png"> </div>
-            <div class="UtilityBtn"> <img src="../../assets/images/others/utilities (2).png"> </div>
-            <div class="UtilityBtn"> <img src="../../assets/images/others/utilities (3).png"> </div>
+            <div class="showUtilityView" style="width: 100%;">
+                <div class="utilityContainer">
+                    <div class="UtilityBtn"> <img src="../../assets/images/others/utilities (1).png"> </div>
+                    <div class="UtilityBtn"> <img src="../../assets/images/others/utilities (2).png"> </div>
+                    <div class="UtilityBtn"> <img src="../../assets/images/others/utilities (3).png"> </div>
+                </div>
+            </div>
         </div>
         <div class="Disclaimer" style="height: 308px"> 
             <div class="panelTitle" style="text-align:left;"> Disclaimer</div>
@@ -31,6 +39,7 @@
     background-color: white;
     border-radius: 12px;
     margin-right: 10px;
+    margin-top: 30px;
     box-shadow: 0px 0px 20px rgba(100,100,100,0.1);
 }
 .Disclaimer{
@@ -38,7 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 1492px;
+    width: calc(100% - 500px);
     height: 418px;
     padding: 180px;
     text-align: left;
@@ -49,29 +58,32 @@
     margin-top: 100px;
     display: flex;
     justify-content: center; align-items: center; text-align: center;
-    width: 367px;
+    width: 27%;
     height: 368px;
     background-color: white;
     border-radius: 50px;
     margin-right: 50px;
     box-shadow: 0px 0px 20px rgba(100,100,100,0.1);
 }
-
+.viewContainer,
+.utilityContainer{
+    display: flex; flex-direction: row; width: 100%;
+}
 .UtilityBtn>img{
     width: 100px;
     height: 100px;
 }
 .oPanelContainer{
-    margin-top: 139px;
+    margin-top: 139px !important;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 1472px;
-    height: 618px;
+    width: calc(100% - 450px);
     padding: 100px;
     background: #F2F2FA;
     border-radius: 40px;
     justify-content: center;
+    text-align: center;
 }
 .panelTitle{
     width: 100%;
@@ -88,5 +100,11 @@
     /* Blue/400 */
 
     color: #320A8D;
+}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 </style>

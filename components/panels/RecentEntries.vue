@@ -1,7 +1,7 @@
 <template>
     <div class="RecentPage">
         <div class="flex-row">
-            <div style="width: 500px; height: 70px; padding-left: 200px;">
+            <div style="width: 500px; height: 70px;">
                 <h3 class="fc-darkBlue" style="margin-top: 0;"> RecentEntries</h3>
             </div>
             <div style="width: calc(100% - 850px); height: 70px;"></div>
@@ -54,10 +54,9 @@
 .entryContainer{
     display: flex;
     flex-direction: row;
-    height: 800px;
+    padding-bottom: 100px;
     margin-top: 100px;
-    width: 1900px;
-    padding-left: 200px;
+    width: calc(100%);
     text-align: right;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -67,10 +66,13 @@
     font-style: normal;
     font-weight: 600;
     font-size: 60px;
+    padding-left: 11%;
     line-height: 72px;
     letter-spacing: -0.4px;
     color: #320A8D;
     margin-bottom: 100px;
+    width: 100%;
+
 }
 .btnPrimary{
     cursor: pointer;
@@ -94,6 +96,7 @@
     margin-right: 50px;    
     padding: 0px 20px;
     text-align: left;
+    padding-bottom: 100px;
 }
 .entryHeader{
     display: block;
